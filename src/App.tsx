@@ -11,7 +11,7 @@ function App() {
   }, [])
   return (
     <>
-      <div className='border-2 h-full w-full'>
+      <div className='border-2 h-full w-'>
         <div className='flex justify-center border-2 border-white h-32'>
           <h1 className='flex text-3xl font-bold text-white'>
             Wordle
@@ -22,9 +22,9 @@ function App() {
           <GameTable letters='hello' />
           <GameTable letters='solar' />
           <GameTable letters='penny' />
-          <GameTable letters='penny' />
-          <GameTable letters='penny' />
-          <GameTable letters='penny' />
+          <GameTable letters='skyre' />
+          <GameTable letters='riots' />
+          <GameTable letters='death' />
         </main>
       </div>
     </>

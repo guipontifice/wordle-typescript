@@ -30,11 +30,12 @@ export default {
       },
     },
     colors: {
-      "yellow": "#fce700",
+      "yellow": "#ecc94b",
       "darkyellow": "#fad905",
       "white": "#ffffff",
       "black": "#000000",
-      "gray": "#a6a6a6"
+      "gray": "#a6a6a6",
+      "green": "#48bb78"
     },
   },
 

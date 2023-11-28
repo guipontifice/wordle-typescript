@@ -1,5 +1,5 @@
 import wordBank from '../word-bank.json'
- 
+
 const word = getRandomWord();
 console.log(word)
 export function getRandomWord(): string {
@@ -12,7 +12,6 @@ export enum LetterState {
     Present,
     Match,
 }
-
 export function computeGuess(
     guess: string,
     answerString: string = word
@@ -37,7 +36,7 @@ export function computeGuess(
             ? answerLetterCount[currentAnswerLetter] + 1
             : 1;
 
-            if (currentAnswerLetter === letter) {
+        if (currentAnswerLetter === letter) {
             result.push(LetterState.Match);
         } else if (answerArray.includes(letter)) {
             result.push(LetterState.Present);
@@ -62,7 +61,5 @@ export function computeGuess(
 
         answerLetterCount[guessLetter]--;
     });
-    console.log(result)
     return result
 }
-// export default getRandomWord
