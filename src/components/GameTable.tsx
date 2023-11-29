@@ -8,9 +8,10 @@ interface WordRowProps {
 function GameTable({ letters: lettersProp = '' }: WordRowProps) {
     const lettersRemaining = LETTER_LENGTH - lettersProp.length
     const letters = 
-    lettersProp.split('')
-    .concat(Array(lettersRemaining)
-    .fill(''));
+    lettersProp
+    .toLowerCase()
+    .split('')
+    .concat(Array(lettersRemaining).fill(''));
 
     const guessStates = computeGuess(lettersProp)
     return (
@@ -22,7 +23,7 @@ function GameTable({ letters: lettersProp = '' }: WordRowProps) {
     )
 }
 interface CharacterBoxProps {
-    value: string;
+    value?: string;
     state?: LetterState;
 }
 function CharacterBox({ value, state }: CharacterBoxProps) {
